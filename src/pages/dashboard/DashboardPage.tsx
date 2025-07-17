@@ -42,7 +42,7 @@ export function DashboardPage(): JSX.Element {
 
     <InDevBanner />
     {/* Request for bug reports on GitHub. */}
-    {!([0x1AA,0x134].includes([...baseURL].reduce((o, c) => o + (parseInt(c, 32) || 0), 0))) && <Alert
+    {!(baseURL === "https://kromer.reconnected.cc/api/krist" ) && <Alert
       type="error" message={<Trans i18nKey={tKey("tips." + baseURL[0].length + "-status")}>
         Welcome to the KristWeb v2 private beta! This site is still in development, so
         most features are currently missing. Please report all bugs on
